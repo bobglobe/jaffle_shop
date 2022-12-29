@@ -1,0 +1,11 @@
+jaffle_shop:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: tinyclues-sandbox
+      dataset: "jaffle_shop"
+      location: EU
+      impersonate_service_account: "{{ var('service_account', None) }}"
+      priority: batch
